@@ -10,9 +10,8 @@ class TypeJobs {
 
   async postTypeJob (body) {
    let typeJob = new TypeJob(body)
-    await typeJob.save((err,data) => {
-      apiMessage(err, data)
-    })
+   let result = await typeJob.save()
+  return result
   }
 }
 
